@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Response Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="recorder-container">
+        <div class="header">
+            <h1>Audio Response Recorder</h1>
+            <p>Record and submit your audio answer</p>
+        </div>
+        
+        <div class="content">
+            <div class="recorder-section">
+                <div class="timer" id="timer">00:00</div>
+                
+                <div class="visualizer-container">
+                    <canvas class="visualizer" id="visualizer" width="800" height="120"></canvas>
+                </div>
+                
+                <div class="controls">
+                    <button id="recordBtn" class="btn btn-danger">
+                        🎤 Start Recording
+                    </button>
+                    <button id="stopBtn" class="btn btn-secondary" disabled>
+                        ⏹️ Stop Recording
+                    </button>
+                    <button id="playBtn" class="btn btn-primary" disabled>
+                        ▶️ Playback
+                    </button>
+                    <button id="submitBtn" class="btn btn-success" disabled>
+                        📤 Submit Recording
+                    </button>
+                </div>
+                
+                <audio id="audioPlayer" class="audio-player" controls></audio>
+                
+                <div id="status" class="status"></div>
+            </div>
+            
+            <div class="submissions-list">
+                <h3>Your Submissions</h3>
+                <div id="submissionsList">
+                    <p>Loading your submissions...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
